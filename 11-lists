@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# List files in the current directory in long format
+ls -la
+
+# Move to the parent directory
+cd ..
+
+# List files in the parent directory in long format
+ls -la
+
+# Move back to the original working directory
+cd -
+
+# List files in the /boot directory in long format
+ls -la /boot
+

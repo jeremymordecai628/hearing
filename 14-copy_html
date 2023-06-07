@@ -1,0 +1,15 @@
+#!/bin/bash
+
+parent_dir="../"
+current_dir="."
+
+for file in "$current_dir"/*.html; do
+    filename=$(basename "$file")
+    parent_file="$parent_dir/$filename"
+
+    if [[ ! -f "$parent_file" || "$file" -nt "$parent_file" ]]; then
+        cp "$file" "$parent_dir"
+        echo "Copied $filename"
+    fi
+done
+

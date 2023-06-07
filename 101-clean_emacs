@@ -1,0 +1,11 @@
+#!/bin/bash
+
+current_dir="."
+
+for file in "$current_dir"/*~; do
+    if [ -f "$file" ]; then
+        rm "$file"
+        echo "Deleted $file"
+    fi
+done
+

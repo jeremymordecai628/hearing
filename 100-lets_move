@@ -1,0 +1,12 @@
+#!/bin/bash
+
+uppercase_dir="/tmp/u"
+mkdir -p "$uppercase_dir"
+
+for file in [A-Z]*; do
+    if [[ -f "$file" ]]; then
+        mv "$file" "$uppercase_dir"
+        echo "Moved $file to $uppercase_dir"
+    fi
+done
+
